@@ -1,6 +1,6 @@
 {
   "name": "authentication-app-client",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "homepage": "https://damenor.github.io/gndx-authentication-app",
   "scripts": {
     "ng": "ng",
