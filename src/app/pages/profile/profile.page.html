@@ -1,0 +1,65 @@
+<header class="header">
+  
+  <img src="assets/images/devchallenges.svg" alt="logo">
+
+  <div class="header__profile" (click)="toggleDropdown()">
+    <div class="header__profile-avatar">DM</div>
+    <div class="header__profile-name">David Menor</div>
+    <div class="header__profile-menu">
+      <i class="fas fa-caret-down"></i>
+      <div class="header__profile-menu-content" [ngClass]="{ 'header__profile-menu-content--open': isDropdownOpen }">
+        <a>
+          <i class="fas fa-user"></i>
+          <span>My Profile</span>
+        </a>
+        <a>
+          <i class="fas fa-user-friends"></i>
+          <span>Group chat</span>
+        </a>
+        <div class="separated"></div>
+        <a routerLink="profile">
+          <i class="fas fa-sign-out-alt"></i>
+          <span>Logout</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+</header>
+
+<div class="profile">
+
+  <h2 class="profile__title">Personal info</h2>
+  <p class="profile__subtitle">
+    Basic info, like your name and photo
+  </p>
+
+  <div class="profile__container">
+    <div>
+      <div>
+        <h3>Profile</h3>
+        <p>Some info may be visible to other people</p>
+      </div>
+      <button>Edit</button>
+    </div>
+    <form formGroup>
+      <div class="form__input">
+        <label>Name</label>
+        <input disabled type="text" value="David Menor">
+      </div>
+      <div class="form__input">
+        <label>Bio</label>
+        <input disabled type="text" value="Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae;">
+      </div>
+      <div class="form__input">
+        <label>Phone</label>
+        <input disabled type="number" value="123456789">
+      </div>
+      <div class="form__input">
+        <label>Email</label>
+        <input disabled type="email" value="damenor@email.com">
+      </div>
+    </form>
+  </div>
+  
+</div>

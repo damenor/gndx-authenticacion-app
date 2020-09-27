@@ -1,0 +1,51 @@
+@import 'imports';
+
+.form {
+
+  padding: 2rem 0;
+  @include animated(fadeIn);
+
+  &__input {
+    @include flex;
+    margin-bottom: 1rem;
+    background-color: colorTheme(light);
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid transparent;
+    @include transition($time: .2s);
+    svg {
+      margin-left: 0.25rem;
+      margin-right: 0.5rem;
+    }
+    input {
+      flex: 1;
+      background-color: transparent;
+      border: none;
+    }
+    &.error {
+      color: colorTheme(danger);
+      input {
+        color: colorTheme(danger);
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding: .75rem;
+    color: colorTheme(light);
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: colorTheme(success);
+    border-radius: 0.25rem;
+    @include transition($time: .2s);
+    &:disabled {
+      opacity: 0.1;
+    }
+    &:active {
+      transform: scale(0.97);
+    }
+  }
+
+}

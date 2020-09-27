@@ -1,0 +1,13 @@
+$color-theme-primary: #fa8231;
+$color-theme-primary-light: lighten(#CF649A, 5);
+$color-theme-secondary: #37474f;
+$color-theme-light: #ecf0f1;
+$color-theme-grey: #ccc;
+$color-theme-danger: #fc5c65;
+$color-theme-info: #4b7bec;
+$color-theme-success: #2bcbba;
+$color-theme-warning: #f7b731;
+
+$navbar-height: 4rem;
+
+@import '@damenor/sass';

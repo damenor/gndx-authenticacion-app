@@ -1,0 +1,73 @@
+@import 'imports';
+
+.auth {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  min-width: 22rem;
+  max-width: 25rem;
+  padding: 2rem;
+  border: 1px solid colorTheme(grey);
+  border-radius: 1rem;
+  overflow: hidden;
+  @include transition($time: 0.4s);
+  
+  @include mediaQuery($max: 544) {
+    border-color: transparent;
+  }
+
+  &__logo {
+    margin-bottom: 2rem;
+    @include animated(bounceInDown);
+    animation-delay: 0.2s;
+    @include transition($time: 0.4s);
+  }
+
+  &__title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    @include animated(fadeInUp);
+  }
+  
+  &__subtitle {
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    font-weight: 300;
+    @include animated(fadeInUp);
+  }
+
+  &__social-text {
+    font-size: 0.8rem;
+    text-align: center;
+    @include transition($time: 0.4s);
+  }
+  
+  &__buttons-socials {
+    @include flex($x: center);
+    margin: 1.5rem 0;
+    @include transition($time: 0.4s);
+    svg {
+      margin: 0 0.5rem;
+      color: colorTheme(grey);
+      font-size: 1.75rem;
+      cursor: pointer;
+      @include transition($time: 0.2s);
+      &:active {
+        color: colorTheme(grey-dark);
+      }
+    }
+  }
+
+  &__is-member {
+    font-size: 0.8rem;
+    font-weight: 300;
+    text-align: center;
+    a {
+      color: colorTheme(info);
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+
+}

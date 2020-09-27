@@ -1,0 +1,33 @@
+<div class="auth">
+
+  <img class="auth__logo" src="assets/images/devchallenges.svg" alt="logo">
+
+  <h2 *ngIf="!isSignUp else signup" class="auth__title">Login</h2>
+
+  <ng-template #signup>
+    <h2 class="auth__title">
+      Join thousands of leaners from around the world
+    </h2>
+    
+    <p class="auth__subtitle">
+      Master web development by making real-life projects. There are multiple paths for you to choose
+    </p>
+  </ng-template>
+
+  <app-form [options]="formOptions"></app-form>
+
+  <p class="auth__social-text">or continue with these social profile</p>
+
+  <div class="auth__buttons-socials">
+    <i class="fab fa-google"></i>
+    <i class="fab fa-facebook"></i>
+    <i class="fab fa-twitter"></i>
+    <i class="fab fa-github"></i>
+  </div>
+  
+  <p class="auth__is-member">
+    Already a member? 
+    <a (click)="toggleForm()">{{ getIsMemberText() }}</a> 
+  </p>
+  
+</div>
